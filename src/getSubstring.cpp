@@ -18,6 +18,14 @@ original String
 #include <stdlib.h>
 
 char * get_sub_string(char *str, int i, int j){
+	char* word;
+	int k;
+	if (str==NULL||i>j)
+             return NULL;
+	word = (char*)malloc(sizeof(char)*(j - i + 2));
+	for (k = 0; i <= j; i++)
+		word[k++] = str[i];
+	word[k] = '\0';
+	return word;
 
-    return NULL;
 }
